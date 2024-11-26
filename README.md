@@ -6,19 +6,27 @@ rodando com docker/sail, e bootstrap no frontend.
 
 Na linha de comando siga as seguintes instruções:
 
-- Levante o projeto com o docker:
+### Rodando pela primeira vez ?
+
+- Crie o arquivo de configuracao .env:
 ```bash
-./vendor/bin/sail up
+cp .env.example .env
+```
+
+- Build e levante o docker:
+```bash
+./vendor/bin/sail up --build
 ```
 
 - Rode as migrations:
 ```bash
 ./vendor/bin/sail artisan migrate 
 ```
+### OU
 
-- Acesso a seguinte URL no seu navegador:
+- Levante o docker:
 ```bash
-localhost
+./vendor/bin/sail up 
 ```
 
 ## Tempo de Desenvolvimento
